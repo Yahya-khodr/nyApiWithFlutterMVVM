@@ -1,6 +1,4 @@
-
 import 'package:ny_testing/models/article_media_model.dart';
-
 
 class Results {
   String? source;
@@ -11,6 +9,7 @@ class Results {
   String? type;
   String? title;
   String? abstract;
+  String? imageUrl;
   List<Media>? media;
 
   Results({
@@ -22,6 +21,7 @@ class Results {
     this.type,
     this.title,
     this.abstract,
+    this.imageUrl,
     this.media,
   });
 
@@ -30,7 +30,7 @@ class Results {
     publishedDate = json["published_date"];
     updated = json["updated"];
     section = json["section"];
-
+    // imageUrl = json['media-metadata'][2]['url'];
     byline = json["byline"];
     type = json["type"];
     title = json["title"];

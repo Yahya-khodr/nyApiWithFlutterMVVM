@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ny_testing/components/app_title.dart';
+import 'package:ny_testing/widgets/app_title.dart';
 import 'package:ny_testing/utils/app_colors.dart';
 import 'package:ny_testing/view_models/articles_view_model.dart';
 import 'package:provider/provider.dart';

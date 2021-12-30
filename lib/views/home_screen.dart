@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ny_testing/components/app_icon.dart';
-import 'package:ny_testing/components/app_title.dart';
+import 'package:ny_testing/widgets/app_icon.dart';
+import 'package:ny_testing/widgets/app_title.dart';
 import 'package:ny_testing/models/article_result_model.dart';
 import 'package:ny_testing/utils/app_colors.dart';
 import 'package:ny_testing/utils/navigation_utils.dart';
@@ -41,6 +41,7 @@ class HomeScreen extends StatelessWidget {
       body: articlesViewModel.articlesListModel.status == 'OK'
           ? ListView.builder(
               itemCount: articlesViewModel.articlesListModel.results!.length,
+              // itemCount: articlesViewModel.articlesListModel.results!.length,
               itemBuilder: (con, index) {
                 Results article =
                     articlesViewModel.articlesListModel.results![index];
@@ -50,19 +51,20 @@ class HomeScreen extends StatelessWidget {
                       articlesViewModel.setSelectedArticle(article);
                       openArticleDetails(context);
                     },
-                    leading: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          article.media![0].mediaMetadata![2].url!),
-                    ),
-                    // leading: Image.network(articlesViewModel.articlesListModel
-                    //     .results![index].media![0].mediaMetadata![2].url!),
+                    leading: article.media!.isNotEmpty
+                        ? CircleAvatar(
+                            backgroundImage: NetworkImage(
+                                article.media![0].mediaMetadata![2].url!),
+                          )
+                        : const CircleAvatar(
+                            backgroundImage: NetworkImage(
+                                'https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')),
                     title: Text(
                       article.title!,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                     ),
                     horizontalTitleGap: 10,
-
                     subtitle: Padding(
                       padding: const EdgeInsets.only(top: 10.0),
                       child: Column(
