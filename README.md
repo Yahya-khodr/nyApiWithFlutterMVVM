@@ -20,8 +20,9 @@ A sample FlutterApp that get list of Most poplular Articles from NyTimesAPi
 
 
 ## Screenshots 
-<img src="screenshots/homeScreen.jpg">
-<img src="screenshots/detailScreen.jpg">
+<img src="res/homeScreen.jpg" height="300em">
+<img src="res/detailScreen.jpg" height="300em">
+
 
 
 ## For Testing 
