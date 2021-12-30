@@ -20,8 +20,8 @@ A sample FlutterApp that get list of Most poplular Articles from NyTimesAPi
 
 
 ## Screenshots 
-![DetailScreen](/relative/path/to/homeScreen.jpg?raw=true "Home Screen")
-![DetailScreen](/relative/path/to/detailScreen.jpg?raw=true "Detail Screen")
+<img src="screenshots/homeScreen.jpg">
+<img src="screenshots/detailScreen.jpg">
 
 
 ## For Testing 
